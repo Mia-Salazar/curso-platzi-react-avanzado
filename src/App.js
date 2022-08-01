@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { ListOfCategories } from './components/ListCategories'
+import { ListCategories } from './components/ListCategories'
 import { GlobalStyle } from './GlobalStyles'
+import { CardList } from './components/CardList'
 
 export const App = () => (
   <div>
     <GlobalStyle />
-    <ListOfCategories />
+    <ListCategories />
+    <CardList />
   </div>
-
 )

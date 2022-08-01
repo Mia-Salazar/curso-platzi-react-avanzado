@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 export const List = styled.ul`
   display: flex;
-  overflow: scroll;
+  overflow: auto;
   width: 100%;
   list-style-type: none;
+  margin-bottom: 20px;
 `
 
 export const Item = styled.li`
