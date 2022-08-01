@@ -12,3 +12,4 @@ Repositorio con el código del [Curso Avanzado de React de Platzi](https://platz
 * [Babel](https://babeljs.io/) - JavaScript compiler.
 * [Webpack](https://webpack.js.org/) - Module bundler
 * [Styled Components](https://styled-components.com/) - ES6 and CSS to style your apps without stress
+* [React Icons](https://react-icons.github.io/react-icons/#/) - Icons
