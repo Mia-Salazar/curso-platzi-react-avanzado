@@ -21,8 +21,6 @@ export const ListCategories = () => {
         const data = await response.json()
         setCategories(data)
         }
-
-        fetchCategories()
     }, [])
   */
   /* with axios
@@ -33,7 +31,6 @@ export const ListCategories = () => {
         );
         setCategories(apiServer.data);
         };
-        fetchApiServerCategories();
     }, []);
   */
   return (
