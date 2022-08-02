@@ -3,16 +3,26 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { Category } from '../Category'
 import { List, Item } from './styles'
 
-export const ListCategories = () => {
+function getCategoriesData () {
   const [categories, setCategories] = useState([])
-  const [showFixed, setShowFixed] = useState(false)
+  const [loading, setLoading] = useState(false)
+
   useEffect(function () {
+    setLoading(true)
     window.fetch('https://petgram-server-edsf8xpy2.now.sh/categories')
       .then(res => res.json())
       .then(response => {
         setCategories(response)
+        setLoading(false)
       })
   }, [])
+
+  return { categories, loading }
+}
+
+export const ListCategories = () => {
+  const { categories, loading } = getCategoriesData()
+  const [showFixed, setShowFixed] = useState(false)
   /* with async await
     useEffect(() => {
         const fetchCategories = async () => {
@@ -46,14 +56,16 @@ export const ListCategories = () => {
   const renderList = (fixed) => (
     <List className={fixed ? 'fixed' : ''}>
       {
-        categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+        loading
+          ? <Item key='loading'><Category /></Item>
+          : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
       }
     </List>
   )
   return (
-    <Fragment>
+    <Fragment >
       {renderList()}
       {showFixed && renderList(true)}
-    </Fragment>
+    </Fragment >
   )
 }
