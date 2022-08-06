@@ -13,3 +13,7 @@ Repositorio con el código del [Curso Avanzado de React de Platzi](https://platz
 * [Webpack](https://webpack.js.org/) - Module bundler
 * [Styled Components](https://styled-components.com/) - ES6 and CSS to style your apps without stress
 * [React Icons](https://react-icons.github.io/react-icons/#/) - Icons
+
+## Project unfinished
+
+Project made just to follow midudev course and practice
